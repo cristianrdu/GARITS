@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1200.0" styleClass="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="30.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="780.0" minWidth="10.0" prefWidth="774.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="30.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="80.0" />
+    <RowConstraints maxHeight="900.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="800.0" minHeight="10.0" prefHeight="80.0" />
+  </rowConstraints>
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="800.0" styleClass="MenueBar" useSystemMenuBar="false" GridPane.columnSpan="2147483647" GridPane.valignment="TOP">
+         <menus>
+            <Menu mnemonicParsing="false" text="Home" />
+            <Menu mnemonicParsing="false" text="Account">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Log Out" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Text fill="#f8f5f5" layoutX="20.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Title" text="Stock Ordering" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+      <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="167.0" styleClass="Login" text="Return" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <GridPane styleClass="InnerAnchorPane" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="478.0" minWidth="0.0" prefWidth="478.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="443.0" minWidth="10.0" prefWidth="302.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="170.0" minHeight="10.0" prefHeight="121.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="228.0" minHeight="0.0" prefHeight="120.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="426.0" minHeight="10.0" prefHeight="426.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="274.0" minHeight="10.0" prefHeight="72.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label layoutX="54.0" layoutY="67.0" styleClass="Label" textFill="WHITE" />
+            <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="33.0" prefWidth="63.0" styleClass="Label" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <ChoiceBox prefHeight="33.0" prefWidth="257.0" styleClass="Label" GridPane.halignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="40.0" />
+               </GridPane.margin></ChoiceBox>
+            <Text fill="#fcfafa" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Label" text="Item:" />
+            <Text fill="#f2f2f2" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Label" text="Total:" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+            <Text fill="#fcfafa" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Label" text="Manufacturer:" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+            <ChoiceBox prefHeight="33.0" prefWidth="261.0" styleClass="Label" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets right="90.0" />
+               </GridPane.margin></ChoiceBox>
+            <Text fill="#f8f6f6" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Label" text="Cart:" GridPane.rowIndex="2" />
+            <TableView maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="217.0" prefWidth="285.0" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+              <columns>
+                <TableColumn prefWidth="75.0" text="Item No" />
+                <TableColumn prefWidth="75.0" text="Quantity" />
+                  <TableColumn prefWidth="74.0" text="Price" />
+              </columns>
+               <GridPane.margin>
+                  <Insets right="90.0" />
+               </GridPane.margin>
+            </TableView>
+            <Text fill="#f5f3f3" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Label" text="Quantity:" GridPane.columnIndex="1" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin></Text>
+            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="63.0" styleClass="InnerButton" text="Add" GridPane.halignment="RIGHT">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin></Button>
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="33.0" prefWidth="99.0" styleClass="InnerButton" text="Remove" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets right="30.0" top="10.0" />
+               </GridPane.margin></Button>
+            <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="138.0" styleClass="InnerButton" text="Start Order" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Button>
+            <Label text="Implent Grand Total" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+   </children>
+</GridPane>

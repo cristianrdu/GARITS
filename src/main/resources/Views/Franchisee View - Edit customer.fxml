@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.servlets.garits.GUIs.EditCustomer">
+  <children>
+    <MenuBar layoutX="0.0" layoutY="0.0" prefHeight="25.0" prefWidth="800.0" useSystemMenuBar="false">
+      <menus>
+        <Menu mnemonicParsing="false" text="Home" />
+        <Menu mnemonicParsing="false" text="Account" />
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <TextField fx:id="email" layoutX="101.0" layoutY="89.0" prefWidth="200.0" promptText="Email" />
+    <TextField fx:id="name" layoutX="101.0" layoutY="132.0" prefWidth="200.0" promptText="Name" />
+    <TextField fx:id="post_code" layoutX="457.0" layoutY="132.0" prefWidth="200.0" promptText="Post Code" />
+    <Button layoutX="34.0" layoutY="360.0" mnemonicParsing="false" onAction="#confirmOnClick" prefHeight="29.0" prefWidth="178.0" text="Edit Customer" />
+    <Button layoutX="566.0" layoutY="360.0" mnemonicParsing="false" onAction="#Back" prefHeight="29.0" prefWidth="64.0" text="Return" />
+    <TextField fx:id="tel" layoutX="457.0" layoutY="89.0" prefWidth="200.0" promptText="Telephone" />
+    <Button layoutX="269.0" layoutY="360.0" mnemonicParsing="false" onAction="#removeCustomerOnclick" prefHeight="29.0" prefWidth="200.0" text="Remove Customer" />
+      <TextField fx:id="fax" layoutX="457.0" layoutY="169.0" prefWidth="200.0" promptText="Fax" />
+      <TextField fx:id="address" layoutX="101.0" layoutY="169.0" prefWidth="200.0" promptText="Address" />
+  </children>
+</AnchorPane>

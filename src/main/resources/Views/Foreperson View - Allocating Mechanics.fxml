@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.servlets.garits.GUIs.AllocatingMechanic">
+  <columnConstraints>
+    <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="30.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="900.0" minWidth="10.0" prefWidth="748.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="30.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="400.0" minHeight="10.0" prefHeight="80.0" />
+    <RowConstraints maxHeight="900.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="400.0" minHeight="10.0" prefHeight="80.0" />
+  </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="339.0" prefWidth="628.0" styleClass="InnerAnchorPane" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <FlowPane layoutX="9.0" layoutY="101.0" prefHeight="266.0" prefWidth="192.0" vgap="20.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="51.0" prefWidth="203.0" styleClass="InnerButton" text="Add / Process Job" />
+                  <Button mnemonicParsing="false" prefHeight="51.0" prefWidth="199.0" styleClass="InnerButton" text="Edit Job Details" />
+                  <Button mnemonicParsing="false" prefHeight="51.0" prefWidth="198.0" styleClass="InnerButton" text="Allocating Mechanics" />
+               </children>
+            </FlowPane>
+            <ScrollBar layoutX="697.0" layoutY="36.0" orientation="VERTICAL" prefHeight="372.0" prefWidth="14.0" />
+            <TableView layoutX="232.0" layoutY="36.0" maxHeight="1000.0" maxWidth="1000.0" prefHeight="372.0" prefWidth="465.0" styleClass="Text">
+               <columns>
+                  <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="134.0" text="Job Overview" />
+                  <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="39.0" text="Tasks" />
+                  <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="95.0" text="Job Start Date" />
+                  <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="76.0" text="Mechanic" />
+                  <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="76.0" text="Job Status" />
+               </columns>
+            </TableView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dfdfdf" height="198.0" layoutX="110.0" layoutY="113.0" stroke="BLACK" strokeType="INSIDE" styleClass="InnerAnchorPane" width="486.0" />
+            <Button layoutX="434.0" layoutY="234.0" mnemonicParsing="false" prefHeight="41.9609375" prefWidth="106.0" styleClass="InnerButton" text="Back" />
+            <Button layoutX="232.0" layoutY="234.0" mnemonicParsing="false" prefHeight="41.9609375" prefWidth="128.0" styleClass="InnerButton" text="Confirm" />
+            <MenuBar layoutX="110.0" layoutY="88.0" prefWidth="492.0">
+               <menus>
+                  <Menu mnemonicParsing="false" text="Notifications" />
+               </menus>
+            </MenuBar>
+            <Text layoutX="140.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Allocating this mechanic to this job. Confirm ?">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Label styleClass="Label" text="Foreperson" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font>
+      </Label>
+      <Label styleClass="Title" text="Name" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <MenuBar prefWidth="657.0" styleClass="MenueBar" useSystemMenuBar="false" GridPane.columnSpan="2147483647" GridPane.valignment="TOP">
+         <menus>
+            <Menu mnemonicParsing="false" text="Home" />
+            <Menu mnemonicParsing="false" text="Account">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Log Out" />
+               </items></Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </children>
+</GridPane>

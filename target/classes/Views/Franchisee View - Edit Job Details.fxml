@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.servlets.garits.GUIs.EditJob">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="30.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="900.0" minWidth="10.0" prefWidth="769.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="30.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="80.0" />
+    <RowConstraints maxHeight="900.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="800.0" minHeight="10.0" prefHeight="80.0" />
+  </rowConstraints>
+   <children>
+      <GridPane layoutX="324.0" layoutY="28.1787109375" styleClass="AnchorPane" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Text fill="#f8f5f5" layoutX="324.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Title" text="Edit Job Details" GridPane.halignment="CENTER" />
+         </children>
+      </GridPane>
+      <GridPane styleClass="InnerAnchorPane" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TextField layoutX="51.0" layoutY="29.0" prefHeight="46.0" prefWidth="237.0" promptText="Customer Full Name" styleClass="Text" translateX="10.0" GridPane.columnSpan="2" />
+            <TextField layoutX="315.0" layoutY="29.0" prefHeight="46.0" prefWidth="237.0" promptText="Car Model" styleClass="Text" GridPane.columnIndex="3" GridPane.columnSpan="2" />
+            <ListView layoutX="222.0" layoutY="197.0" prefHeight="156.0" prefWidth="330.0" styleClass="Text" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="3" GridPane.rowSpan="2" />
+            <Button layoutX="31.0" layoutY="352.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="153.0" styleClass="InnerButton" text="Confirm " GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+            <Label layoutX="71.0" layoutY="265.0" styleClass="Label" text="Job Tasks:" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <ChoiceBox layoutX="315.0" layoutY="152.0" prefHeight="46.0" prefWidth="237.0" styleClass="Text" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="2">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Item 1" />
+                     <String fx:value="Item 2" />
+                     <String fx:value="Item 3" />
+                  </FXCollections>
+               </items>
+            </ChoiceBox>
+            <PasswordField layoutX="51.0" layoutY="93.0" prefHeight="46.0" prefWidth="237.0" promptText="Job Name" styleClass="Text" translateX="10.0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+            <TextField layoutX="315.0" layoutY="93.0" prefHeight="46.0" prefWidth="237.0" promptText="No' of Job Tasks" styleClass="Text" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="167.0" styleClass="Login" text="Return" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <MenuBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="800.0" styleClass="MenueBar" useSystemMenuBar="false" GridPane.columnSpan="2147483647" GridPane.valignment="TOP">
+         <menus>
+            <Menu mnemonicParsing="false" text="Home" />
+            <Menu mnemonicParsing="false" text="Account">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Log Out" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </children>
+</GridPane>

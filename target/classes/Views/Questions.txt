@@ -1,0 +1,21 @@
+Do you want to keep the search inside or outsitd?#
+
+How do i seprate the button(Mechanic view etc,)
+
+Whats with the Name, things (Franchisee view etc, Foreperson view)--Glakho will change that
+
+Whats this the menue thing (Franchisee view etc)
+
+Franchisee- Generate Reports(should print and view be there or on another view)- thik about it
+
+Franchisee view - edit-Remove Customer(More info)- text area a better view. Create a plus button to add more cars. Add vehicel from.
+
+Franchisee view- discount(how do we fit the table in?)- scroll bar should allow you to move.
+
+Franchisee View - Add-Process View(what is this, and why is it deisnfws as this)
+
+Foreperson view(better way of doing it?)- make a new screen for choosing a mechanic to..
+
+Foreperson view(Allocate mechanic. Need help)
+
+Administrator View. How do i join the buttons

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.servlets.garits.GUIs.AddUser">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="23.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="900.0" minWidth="10.0" prefWidth="757.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="30.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="80.0" />
+    <RowConstraints maxHeight="900.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="80.0" />
+  </rowConstraints>
+   <children>
+      <GridPane styleClass="InnerAnchorPane" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="123.0" minHeight="10.0" prefHeight="122.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="139.0" minHeight="10.0" prefHeight="122.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="265.0" minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="206.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="name" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="45.0" prefWidth="261.0" promptText="Full Name" styleClass="Text" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="userName" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="45.0" prefWidth="279.0" promptText="Username" styleClass="Text" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+            <PasswordField fx:id="password" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="45.0" prefWidth="269.0" promptText="Password" styleClass="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <PasswordField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="45.0" prefWidth="275.0" promptText="Confirm Password" styleClass="Text" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Label styleClass="Label" text="Role:" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+            <ChoiceBox fx:id="role" layoutX="292.0" layoutY="140.0" prefHeight="45.0" prefWidth="243.0" styleClass="Text" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <items>
+              <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Receptionist" />
+                <String fx:value="Franchisee" />
+                <String fx:value="Foreperson" />
+                <String fx:value="Mechanic" />
+              </FXCollections>
+            </items>
+          </ChoiceBox>
+            <Button mnemonicParsing="false" onAction="#confirmOnClick" prefHeight="45.0" prefWidth="171.0" styleClass="InnerButton" text="Add User" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="45.0" prefWidth="279.0" promptText="Hourly rate" styleClass="Text" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <MenuBar prefHeight="25.0" prefWidth="206.0" styleClass="MenueBar" useSystemMenuBar="false" GridPane.columnSpan="2147483647" GridPane.valignment="TOP">
+         <menus>
+            <Menu mnemonicParsing="false" onAction="#Home" styleClass="MenueText" text="Home" />
+            <Menu mnemonicParsing="false" text="Account">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Log Out" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Label styleClass="Title" text="Add user" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+         <font>
+            <Font name="Arial Black" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="back" mnemonicParsing="false" onAction="#back" prefHeight="45.0" prefWidth="139.0" styleClass="Login" text="Back" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</GridPane>

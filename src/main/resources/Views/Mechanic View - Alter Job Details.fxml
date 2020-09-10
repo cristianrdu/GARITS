@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1200.0" styleClass="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.servlets.garits.GUIs.EditJob">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" percentWidth="3.75" prefWidth="30.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="780.0" minWidth="10.0" percentWidth="92.5" prefWidth="774.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" percentWidth="3.75" prefWidth="30.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="80.0" />
+    <RowConstraints maxHeight="900.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="800.0" minHeight="10.0" prefHeight="80.0" />
+  </rowConstraints>
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="800.0" styleClass="MenueBar" useSystemMenuBar="false" GridPane.columnSpan="2147483647" GridPane.valignment="TOP">
+         <menus>
+            <Menu mnemonicParsing="false" text="Home" />
+            <Menu mnemonicParsing="false" text="Account">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Log Out" />
+               </items></Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+         <children>
+            <Text fill="#f8f5f5" layoutX="20.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Title" text="Edit Job Details" />
+         </children>
+      </AnchorPane>
+      <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="167.0" styleClass="Login" text="Return" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <GridPane styleClass="InnerAnchorPane" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="439.0" minWidth="10.0" percentWidth="5.0" prefWidth="432.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="439.0" minWidth="10.0" percentWidth="45.0" prefWidth="432.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="456.0" minWidth="10.0" percentWidth="45.0" prefWidth="456.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="456.0" minWidth="10.0" percentWidth="5.0" prefWidth="456.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="2" GridPane.rowSpan="2147483647">
+              <tabs>
+                <Tab text="Add Task">
+                  <content>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="20.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="30.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="30.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="35.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" percentHeight="25.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TextField prefHeight="46.0" prefWidth="153.0" promptText="Work carried out" styleClass="Text" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                              <TextField prefHeight="46.0" prefWidth="153.0" promptText="Estimated Time" styleClass="Text" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                              <TextField prefHeight="46.0" prefWidth="153.0" promptText="Task Duration" styleClass="Text" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Button mnemonicParsing="false" text="Add Task" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField prefHeight="46.0" prefWidth="153.0" promptText="task duration" styleClass="Text" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <ChoiceBox prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <Label styleClass="Label" stylesheets="@../New%20folder/GAIRTS/GARITS/src/GUIs/Views/Login.css" text="Type of  Task" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                  </content>
+                </Tab>
+                <Tab text="Add Spare Parts">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+            <TableView maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="252.0" prefWidth="494.0" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="1" GridPane.rowSpan="2147483647" GridPane.valignment="TOP">
+              <columns>
+                <TableColumn prefWidth="75.0" text="task_id" />
+                <TableColumn prefWidth="111.0" text="estimated_time" />
+                  <TableColumn prefWidth="102.0" text="task_duration" />
+                  <TableColumn prefWidth="102.0" text="task_duration" />
+              </columns>
+            </TableView>
+            <Button mnemonicParsing="false" text="Remove Task" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" text="Edit Task" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Label styleClass="Label" text="Job Id:" textFill="WHITE" GridPane.columnIndex="1" />
+            <Label text="Implement Job Id" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets right="30.0" />
+               </GridPane.margin>
+            </Label>
+            <ChoiceBox prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+   </children>
+</GridPane>

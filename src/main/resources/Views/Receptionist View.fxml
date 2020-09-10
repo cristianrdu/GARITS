@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1200.0" styleClass="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.servlets.garits.GUIs.ReceptionistView">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="30.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="780.0" minWidth="10.0" percentWidth="95.5" prefWidth="774.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="30.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" percentHeight="15.0" prefHeight="80.0" />
+    <RowConstraints maxHeight="900.0" minHeight="10.0" percentHeight="70.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="800.0" minHeight="10.0" percentHeight="15.0" prefHeight="80.0" />
+  </rowConstraints>
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="1200.0" styleClass="MenueBar" useSystemMenuBar="false" GridPane.columnSpan="2147483647" GridPane.valignment="TOP">
+         <menus>
+            <Menu mnemonicParsing="false" text="Home" />
+            <Menu mnemonicParsing="false" text="Account">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#LogOut" text="Log Out" />
+               </items></Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Text fill="#f8f5f5" layoutX="20.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Title" text="Name" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+      <Label layoutX="239.0" layoutY="32.0" styleClass="Label" text="Receptionist" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+      <GridPane styleClass="InnerAnchorPane" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="510.0" minHeight="10.0" percentHeight="45.0" prefHeight="245.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="510.0" minHeight="10.0" percentHeight="10.0" prefHeight="245.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="311.0" minHeight="10.0" percentHeight="45.0" prefHeight="311.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TableView fx:id="customerTable" onMouseClicked="#ShowJobs" prefHeight="223.0" prefWidth="700.0" GridPane.columnSpan="2147483647" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+               <columns>
+                  <TableColumn fx:id="email" maxWidth="5000.0" minWidth="10.0" prefWidth="100.0" text="Email" />
+                  <TableColumn fx:id="name" maxWidth="5000.0" minWidth="10.0" prefWidth="111.0" text="Name" />
+                  <TableColumn fx:id="address" maxWidth="5000.0" minWidth="10.0" prefWidth="213.0" text="Address" />
+                  <TableColumn fx:id="post_code" maxWidth="5000.0" minWidth="10.0" prefWidth="164.0" text="Post Code" />
+                  <TableColumn fx:id="fax" maxWidth="5000.0" minWidth="10.0" prefWidth="205.0" text="fax" />
+                  <TableColumn fx:id="tel" maxWidth="5000.0" minWidth="10.0" prefWidth="168.0" text="tel" />
+               </columns>
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </TableView>
+            <TableView fx:id="JobsTable" prefHeight="338.0" prefWidth="555.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
+               <columns>
+                  <TableColumn fx:id="type" maxWidth="5000.0" minWidth="10.0" prefWidth="166.0" text="Job Type" />
+                  <TableColumn fx:id="status" maxWidth="5000.0" minWidth="10.0" prefWidth="114.0" text="Job Status" />
+                  <TableColumn fx:id="mechanic" maxWidth="5000.0" minWidth="10.0" prefWidth="114.0" text="Mechanic " />
+                  <TableColumn fx:id="customer" maxWidth="5000.0" minWidth="10.0" prefWidth="114.0" text="customer" />
+               </columns>
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </TableView>
+            <Label text="Customers:" GridPane.halignment="CENTER" GridPane.valignment="TOP" />
+            <Label text="Jobs:" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+            <Label styleClass="Label" text="Sort Jobs By Status" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+            </Label>
+            <ChoiceBox prefHeight="46.0" prefWidth="219.0" styleClass="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="Item 1" />
+                     <String fx:value="Item 2" />
+                     <String fx:value="Item 3" />
+                  </FXCollections>
+               </items>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </ChoiceBox>
+            <Button mnemonicParsing="false" onAction="#AddJob" prefHeight="52.0" prefWidth="153.0" styleClass="Login" text="Refresh" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <FlowPane alignment="CENTER" hgap="100.0" prefHeight="324.0" prefWidth="154.0" vgap="20.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+         <children>
+            <Button mnemonicParsing="false" onAction="#AddJob" prefHeight="52.0" prefWidth="153.0" styleClass="Login" text="Add Job" />
+            <Button mnemonicParsing="false" onAction="#GenerateReport" prefHeight="57.0" prefWidth="153.0" styleClass="Login" text="Generate &#10;Reports" />
+            <Button mnemonicParsing="false" onAction="#UpdateStock" prefHeight="57.0" prefWidth="153.0" styleClass="Login" text="Update&#10; Stock" />
+            <Button mnemonicParsing="false" onAction="#GenerateInvoice" prefHeight="58.0" prefWidth="153.0" styleClass="Login" text="Generate &#10;Invoice" />
+         </children>
+      </FlowPane>
+   </children>
+</GridPane>

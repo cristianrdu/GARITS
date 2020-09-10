@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import org.controlsfx.control.textfield.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1200.0" styleClass="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.servlets.garits.GUIs.UpdateStock">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" percentWidth="100.0" prefWidth="30.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" percentHeight="5.0" prefHeight="80.0" />
+        <RowConstraints maxHeight="900.0" minHeight="10.0" percentHeight="90.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="800.0" minHeight="10.0" percentHeight="5.0" prefHeight="80.0" />
+    </rowConstraints>
+    <children>
+        <MenuBar prefHeight="25.0" prefWidth="800.0" styleClass="MenueBar" useSystemMenuBar="false" GridPane.columnSpan="2147483647" GridPane.valignment="TOP">
+            <menus>
+                <Menu mnemonicParsing="false" text="Home" />
+                <Menu mnemonicParsing="false" text="Account">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#LogOut" text="Log Out" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <Text layoutX="20.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Title" text="Stock Control" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+        <SplitPane dividerPositions="0.318" pickOnBounds="false" prefHeight="160.0" prefWidth="200.0" GridPane.rowIndex="1">
+            <items>
+                <GridPane prefHeight="500.0" prefWidth="100.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Accordion fx:id="accordion">
+                            <panes>
+                                <TitledPane prefHeight="634.0" prefWidth="378.0" text="Add Spare Part">
+                                    <content>
+                                        <GridPane>
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                            <children>
+                                                <ScrollPane prefHeight="413.0" prefViewportHeight="637.0" prefViewportWidth="338.0" prefWidth="355.0">
+                                                    <content>
+                                                        <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="350.0">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" percentHeight="10.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            </rowConstraints>
+                                                            <children>
+                                                                <TextField fx:id="descTF" promptText="Description">
+                                                                    <GridPane.margin>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                    </GridPane.margin>
+                                                                </TextField>
+                                                                <TextField fx:id="costTF" promptText="Unit Cost" GridPane.columnIndex="1">
+                                                                    <GridPane.margin>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                    </GridPane.margin>
+                                                                </TextField>
+                                                                <TextField fx:id="qttyTF" promptText="Initial Quantity" GridPane.rowIndex="1">
+                                                                    <GridPane.margin>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                    </GridPane.margin>
+                                                                </TextField>
+                                                                <TextField fx:id="typeTF" promptText="Vehicle Type" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                    <GridPane.margin>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                    </GridPane.margin>
+                                                                </TextField>
+                                                                <TextField fx:id="yearTF" promptText="Years" GridPane.rowIndex="2">
+                                                                    <GridPane.margin>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                    </GridPane.margin>
+                                                                </TextField>
+                                                                <TextField fx:id="thresholdTF" promptText="Threshold" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                                    <GridPane.margin>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                    </GridPane.margin>
+                                                                </TextField>
+                                                                <Label text="Unit Cost:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP" />
+                                                                <Label text="Description:" GridPane.halignment="CENTER" GridPane.valignment="TOP" />
+                                                                <Label text="Vehicle Type:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                                                                <Label text="Quantity:" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                                                                <Label text="Threshold:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+                                                                <Label text="Years:" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+                                                                <Label text="Manufacturer Name:" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+                                                                <ChoiceBox fx:id="manChoice" prefWidth="165.0" GridPane.rowIndex="3">
+                                                                    <GridPane.margin>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                    </GridPane.margin>
+                                                                </ChoiceBox>
+                                                                <Button mnemonicParsing="false" onAction="#AddSparePart" text="Confirm" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                                            </children>
+                                                        </GridPane>
+                                                    </content>
+                                                    <effect>
+                                                        <Reflection />
+                                                    </effect>
+                                                </ScrollPane>
+                                            </children>
+                                        </GridPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane prefHeight="634.0" prefWidth="378.0" text="Add Manufacturer">
+                                    <content>
+                                        <GridPane>
+                                            <children>
+                                                <ScrollPane prefHeight="413.0" prefViewportHeight="637.0" prefViewportWidth="338.0" prefWidth="355.0">
+                                                    <content>
+                                                        <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="350.0">
+                                                            <children>
+                                                                <TextField fx:id="manNameTF" promptText="Name">
+                                                                    <GridPane.margin>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                    </GridPane.margin>
+                                                                </TextField>
+                                                                <TextField fx:id="manAddTF" promptText="Address" GridPane.columnIndex="1">
+                                                                    <GridPane.margin>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                    </GridPane.margin>
+                                                                </TextField>
+                                                                <TextField fx:id="manConTF" promptText="Contact" GridPane.rowIndex="1">
+                                                                    <GridPane.margin>
+                                                                        <Insets left="5.0" right="5.0" />
+                                                                    </GridPane.margin>
+                                                                </TextField>
+                                                                <Label text="Address:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP" />
+                                                                <Label text="Name:" GridPane.halignment="CENTER" GridPane.valignment="TOP" />
+                                                                <Label text="Contact" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                                                                <Button mnemonicParsing="false" onAction="#AddManufacturer" text="Confirm" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                                            </children>
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0" />
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" percentHeight="10.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            </rowConstraints>
+                                                        </GridPane>
+                                                    </content>
+                                                    <effect>
+                                                        <Reflection />
+                                                    </effect>
+                                                </ScrollPane>
+                                            </children>
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                        </GridPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane prefHeight="634.0" prefWidth="378.0" text="Orders">
+                                    <content>
+                                        <GridPane>
+                                            <children>
+                                                <ScrollPane prefHeight="413.0" prefViewportHeight="637.0" prefViewportWidth="338.0" prefWidth="355.0">
+                                                    <effect>
+                                                        <Reflection />
+                                                    </effect>
+                                                    <content>
+                                                        <GridPane prefHeight="688.0" prefWidth="344.0">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                            </rowConstraints>
+                                                            <children>
+                                                                <TableView fx:id="orders" prefHeight="200.0" prefWidth="200.0">
+                                                                    <columns>
+                                                                        <TableColumn fx:id="orderNo" prefWidth="33.0" text="No" />
+                                                                        <TableColumn fx:id="orderDate" prefWidth="79.0" text="date" />
+                                                                        <TableColumn fx:id="orderCost" text="cost" />
+                                                                        <TableColumn fx:id="orderQuantity" prefWidth="70.0" text="quantity" />
+                                                                        <TableColumn fx:id="orderStockCode" prefWidth="65.0" text="stock code" />
+                                                                    </columns>
+                                                                    <contextMenu>
+                                                                        <ContextMenu>
+                                                                            <items>
+                                                                                <MenuItem mnemonicParsing="false" onAction="#RefreshOrders" text="Refresh" />
+                                                                            </items>
+                                                                        </ContextMenu>
+                                                                    </contextMenu>
+                                                                </TableView>
+                                                            </children>
+                                                        </GridPane>
+                                                    </content>
+                                                </ScrollPane>
+                                            </children>
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                        </GridPane>
+                                    </content>
+                                </TitledPane>
+                                <TitledPane fx:id="sellPartsTab" layoutX="10.0" layoutY="793.0" prefHeight="634.0" prefWidth="378.0" text="Sell Parts">
+                                    <content>
+                                        <GridPane>
+                                            <children>
+                                                <ScrollPane prefHeight="413.0" prefViewportHeight="637.0" prefViewportWidth="338.0" prefWidth="355.0">
+                                                    <content>
+                                                        <GridPane prefHeight="688.0" prefWidth="344.0">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="90.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="5.0" prefWidth="100.0" />
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" percentHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" percentHeight="50.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            </rowConstraints>
+                                                            <children>
+                                                                <ListView fx:id="sellParts" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                    <GridPane.margin>
+                                                                        <Insets bottom="50.0" left="5.0" right="5.0" top="20.0" />
+                                                                    </GridPane.margin>
+                                                   <contextMenu>
+                                                      <ContextMenu>
+                                                        <items>
+                                                          <MenuItem mnemonicParsing="false" onAction="#EditQuantity" text="Edit Quantity" />
+                                                        </items>
+                                                      </ContextMenu>
+                                                   </contextMenu>
+                                                                </ListView>
+                                                                <Label text="Spare Parts:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                                                                <Button mnemonicParsing="false" onAction="#RemoveFromSellList" text="Remove" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                                                                    <GridPane.margin>
+                                                                        <Insets bottom="10.0" />
+                                                                    </GridPane.margin>
+                                                                </Button>
+                                                                <Button mnemonicParsing="false" onAction="#ConfirmSale" text="Confirm Sale" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                                                <Button mnemonicParsing="false" onAction="#CancelSale" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                                                                    <GridPane.margin>
+                                                                        <Insets top="70.0" />
+                                                                    </GridPane.margin>
+                                                                </Button>
+                                                                <Label text="Total Price:" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label fx:id="TotalPriceL" prefHeight="17.0" prefWidth="46.0" text="0.0" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                                                                    <GridPane.margin>
+                                                                        <Insets left="65.0" />
+                                                                    </GridPane.margin>
+                                                                </Label>
+                                                                <Label prefHeight="17.0" prefWidth="12.0" text="£" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                                                                    <GridPane.margin>
+                                                                        <Insets left="100.0" />
+                                                                    </GridPane.margin>
+                                                                </Label>
+                                                                <Label text="Payment Method:" GridPane.columnIndex="1" GridPane.valignment="TOP">
+                                                                    <GridPane.margin>
+                                                                        <Insets top="50.0" />
+                                                                    </GridPane.margin>
+                                                                </Label>
+                                                                <ChoiceBox fx:id="paymentMethod" prefHeight="25.0" prefWidth="174.0" GridPane.columnIndex="1" GridPane.valignment="TOP">
+                                                                    <items>
+                                                                        <FXCollections fx:factory="observableArrayList">
+                                                                            <String fx:value="Cash" />
+                                                                            <String fx:value="Card" />
+                                                                            <String fx:value="Cheque" />
+                                                                        </FXCollections>
+                                                                    </items>
+                                                                    <GridPane.margin>
+                                                                        <Insets left="100.0" top="45.0" />
+                                                                    </GridPane.margin>
+                                                                </ChoiceBox>
+                                                                <Button mnemonicParsing="false" onAction="#Refresh" text="Refresh" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                                                                    <GridPane.margin>
+                                                                        <Insets bottom="10.0" left="5.0" />
+                                                                    </GridPane.margin>
+                                                                </Button>
+                                                                <Label text="Due Date:" GridPane.columnIndex="1" />
+                                                                <DatePicker fx:id="payDate" GridPane.columnIndex="1">
+                                                                    <GridPane.margin>
+                                                                        <Insets left="100.0" />
+                                                                    </GridPane.margin>
+                                                                </DatePicker>
+                                                <Label fx:id="quantLabel1" text="Quantity:" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="50.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <TextField fx:id="quantityToSell1" maxWidth="-Infinity" prefHeight="25.0" prefWidth="101.0" promptText="Quantity" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="50.0" left="100.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <Button fx:id="Ok1" mnemonicParsing="false" onAction="#OK2" text="Ok" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="50.0" left="210.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                            </children>
+                                                        </GridPane>
+                                                    </content>
+                                                    <effect>
+                                                        <Reflection />
+                                                    </effect>
+                                                </ScrollPane>
+                                            </children>
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                        </GridPane>
+                                    </content>
+                                </TitledPane>
+                            </panes>
+                        </Accordion>
+                    </children>
+                </GridPane>
+                <GridPane>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" percentHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" percentHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <TableView fx:id="spareParts" prefHeight="200.0" prefWidth="200.0">
+                            <columns>
+                                <TableColumn fx:id="code" prefWidth="46.0" text="Code" />
+                                <TableColumn fx:id="description" prefWidth="104.0" text="Description" />
+                                <TableColumn fx:id="unitCost" prefWidth="63.0" text="Unit Cost" />
+                                <TableColumn fx:id="vehicleType" prefWidth="106.0" text="Vehicle Type" />
+                                <TableColumn fx:id="quantity" prefWidth="81.0" text="Quantity" />
+                                <TableColumn fx:id="manufacturer" prefWidth="111.0" text="Manufacturer" />
+                                <TableColumn fx:id="threshold" prefWidth="111.0" text="Threshold" />
+                            </columns>
+                            <GridPane.margin>
+                                <Insets bottom="35.0" right="10.0" top="20.0" />
+                            </GridPane.margin>
+                            <contextMenu>
+                                <ContextMenu>
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#UpdateThreshold" text="Update Threshold" />
+                                        <MenuItem mnemonicParsing="false" onAction="#AddToSalesList" text="Add to sale list" />
+                                        <MenuItem mnemonicParsing="false" onAction="#Restock" text="Restock" />
+                                        <MenuItem mnemonicParsing="false" onAction="#Reorder" text="Re-order" />
+                                    </items>
+                                </ContextMenu>
+                            </contextMenu>
+                        </TableView>
+                        <TableView fx:id="manTable" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                            <columns>
+                                <TableColumn fx:id="name" prefWidth="154.0" text="Name" />
+                                <TableColumn fx:id="address" prefWidth="431.0" text="Address" />
+                                <TableColumn fx:id="contact" prefWidth="179.0" text="Contact" />
+                            </columns>
+                            <GridPane.margin>
+                                <Insets bottom="35.0" top="20.0" />
+                            </GridPane.margin>
+                        </TableView>
+                        <Label text="Spare Parts:" GridPane.valignment="TOP" />
+                        <Label text="Manufacturers:" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                        <Button mnemonicParsing="false" onAction="#Refresh" text="Refresh" GridPane.valignment="BOTTOM">
+                            <GridPane.margin>
+                                <Insets bottom="5.0" left="5.0" />
+                            </GridPane.margin>
+                        </Button>
+                        <Separator prefWidth="200.0" GridPane.valignment="BOTTOM" />
+                        <Button mnemonicParsing="false" text="Remove" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                            <GridPane.margin>
+                                <Insets bottom="5.0" left="100.0" />
+                            </GridPane.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" text="Remove" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                            <GridPane.margin>
+                                <Insets bottom="5.0" left="100.0" />
+                            </GridPane.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#Refresh" text="Refresh" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                            <GridPane.margin>
+                                <Insets bottom="5.0" left="5.0" />
+                            </GridPane.margin>
+                        </Button>
+                        <Button fx:id="Ok" mnemonicParsing="false" onAction="#OK" text="Ok" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                            <GridPane.margin>
+                                <Insets bottom="5.0" />
+                            </GridPane.margin>
+                        </Button>
+                  <TextField fx:id="quantityToSell" maxWidth="-Infinity" prefHeight="25.0" prefWidth="101.0" promptText="Quantity" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" right="150.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label fx:id="quantLabel" text="Quantity" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" right="300.0" />
+                     </GridPane.margin>
+                  </Label>
+                    </children>
+                </GridPane>
+            </items>
+        </SplitPane>
+        <Button mnemonicParsing="false" onAction="#Back" text="Back" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+    </children>
+</GridPane>
